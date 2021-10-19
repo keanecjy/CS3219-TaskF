@@ -31,7 +31,7 @@ app.get("/photos/:id", async (req, res) => {
 });
 
 function getOrSetCache(key, cb) {
-    return new Promise(((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         redisClient.get(key, async (error, data) => {
             if (error) {
                 return reject(error);
@@ -46,7 +46,7 @@ function getOrSetCache(key, cb) {
             redisClient.setex(key, 600, JSON.stringify(freshData));
             return resolve(freshData);
         })
-    }))
+    })
 }
 
 app.listen(3000);

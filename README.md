@@ -9,7 +9,7 @@
 ## Commands
 
 1. Start redis client using `redis-server`
-2. In another terminal, start the redis client using `redis-client`. This can be used to check the keys present.
+2. In another terminal, start the redis client using `redis-cli`. This can be used to check the keys present.
 3. Install module dependencies `npm install`
 4. Start the server using `npm start`
 5. Using Postman, we can hit [http://localhost:3000/photos](http://localhost:3000/photos)
